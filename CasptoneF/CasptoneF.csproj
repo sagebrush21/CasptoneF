@@ -126,6 +126,7 @@
     <Content Include="js\umd\popper-utils.min.js" />
     <Content Include="js\umd\popper.js" />
     <Content Include="js\umd\popper.min.js" />
+    <Content Include="js\webJava.js" />
     <Content Include="lendForm.aspx" />
     <Content Include="Web.config" />
     <Content Include="js\umd\popper.min.js.map" />

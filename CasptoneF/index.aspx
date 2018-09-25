@@ -38,8 +38,8 @@
 
     <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto navbar-left font-sz-5">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success ml-2 h-50" type="submit">Search</button>
+            <asp:TextBox ID="searchTextBox" runat="server"></asp:TextBox>
+            <asp:Button ID="searchButton" runat="server" Text="Search" OnClick="searchButton_Click" />
         </div>
         <div class="navbar-nav ml-auto navbar-right font-sz-5">
             <a class="nav-item nav-link active" href="index.aspx"> Home <span class="sr-only">(current)</span></a>

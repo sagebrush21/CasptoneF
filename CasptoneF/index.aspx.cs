@@ -13,42 +13,85 @@ namespace CasptoneF
 	public partial class index : System.Web.UI.Page
 	{
         StringBuilder test = new StringBuilder();
-        
+        string searchText;
+        bool isRealoaded = false;
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select * from [new_Table]";
-            cmd.Connection = con;
-            SqlDataReader rd = cmd.ExecuteReader();
-
-            if(rd.HasRows)
+            if (isRealoaded)
             {
-                while (rd.Read())
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select * from [new_Table] where description LIKE " + searchText + ";";
+                cmd.Connection = con;
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                if (rd.HasRows)
                 {
-                    object binaryData = rd[1];
-                    byte[] bytes = (byte[])binaryData;
+                    while (rd.Read())
+                    {
+                        object binaryData = rd[1];
+                        byte[] bytes = (byte[])binaryData;
 
-                    test.Append("<div class='col-lg'>");
-                    test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
-                    test.Append("<img class='card-img-top'" + "src='data:image/png;base64,"+ Convert.ToBase64String(bytes, 0, bytes.Length)+ "' alt='Card image cap'>");
-                    test.Append("<div class='card-body'>");
-                    test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton'>"+rd[2]+"</button></a></h5>");
-                    test.Append("</div>");
-                    test.Append("</div>");
-                    test.Append("</div>");
+                        test.Append("<div class='col-lg'>");
+                        test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
+                        test.Append("<img class='card-img-top'" + "src='data:image/png;base64," + Convert.ToBase64String(bytes, 0, bytes.Length) + "' alt='Card image cap'>");
+                        test.Append("<div class='card-body'>");
+                        test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton'>" + rd[2] + "</button></a></h5>");
+                        test.Append("</div>");
+                        test.Append("</div>");
+                        test.Append("</div>");
+                    }
                 }
-            }
 
-            testPlaceHolder.Controls.Add(new Literal {Text = test.ToString()});
-            rd.Close();
+                testPlaceHolder.Controls.Add(new Literal { Text = test.ToString() });
+                rd.Close();
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select * from [new_Table]";
+                cmd.Connection = con;
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                if (rd.HasRows)
+                {
+                    while (rd.Read())
+                    {
+                        object binaryData = rd[1];
+                        byte[] bytes = (byte[])binaryData;
+
+                        test.Append("<div class='col-lg'>");
+                        test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
+                        test.Append("<img class='card-img-top'" + "src='data:image/png;base64," + Convert.ToBase64String(bytes, 0, bytes.Length) + "' alt='Card image cap'>");
+                        test.Append("<div class='card-body'>");
+                        test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton'>" + rd[2] + "</button></a></h5>");
+                        test.Append("</div>");
+                        test.Append("</div>");
+                        test.Append("</div>");
+                    }
+                }
+
+                testPlaceHolder.Controls.Add(new Literal { Text = test.ToString() });
+                rd.Close();
+            }
 		}
 
         protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
         {
 
+        }
+
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+            searchText = searchTextBox.Text;
+            isRealoaded = true;
+
+            Page.Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
         }
     }
 }
