@@ -13,17 +13,26 @@ namespace CasptoneF
 	public partial class index : System.Web.UI.Page
 	{
         StringBuilder test = new StringBuilder();
+        bool isReloaded = false;
         string searchText;
-        bool isRealoaded = false;
-		protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
 		{
-            if (isRealoaded)
+            if(Request.QueryString["field2"] == "true")
+            {
+                String s = Request.QueryString["field1"];
+                String x = Request.QueryString["field2"];
+
+                searchText = s.ToString();
+                isReloaded = true;
+            }
+
+            if (isReloaded)
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Select * from [new_Table] where description LIKE " + searchText + ";";
+                cmd.CommandText = "Select * from [new_Table] where description LIKE '%" + searchText + "%'";
                 cmd.Connection = con;
                 SqlDataReader rd = cmd.ExecuteReader();
 
@@ -88,10 +97,9 @@ namespace CasptoneF
 
         protected void searchButton_Click(object sender, EventArgs e)
         {
-            searchText = searchTextBox.Text;
-            isRealoaded = true;
-
-            Page.Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
+            string value1 = searchTextBox.Text;
+            string value2 = "true";
+            Response.Redirect("index.aspx?field1="+value1+"&field2="+value2);
         }
     }
 }
