@@ -43,10 +43,10 @@
         </div>
         <div class="navbar-nav ml-auto navbar-right font-sz-5">
             <a class="nav-item nav-link active" href="index.aspx"> Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link ml-2" href="practices.html">Borrow</a>
+            <a class="nav-item nav-link ml-2" href="#">Borrow</a>
             <a class="nav-item nav-link ml-2" href="lendForm.aspx">Lend</a>
-            <a class="nav-item nav-link ml-2" href="articles.html">Contact</a>
-            <a class="nav-item nav-link ml-2" href="testimonials.html">My Profile</a>
+            <a class="nav-item nav-link ml-2" href="#">Contact</a>
+            <a class="nav-item nav-link ml-2" href="login.aspx">Login</a>
         </div>
     </div>
 </nav>
