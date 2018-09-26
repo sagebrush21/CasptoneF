@@ -20,8 +20,9 @@ namespace CasptoneF
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+            // String to store sql connection
             string a;
-
+            // Connection string from sql database stored and connection established
             a = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
             SqlConnection con = new SqlConnection(a);
             con.Open();
@@ -32,7 +33,9 @@ namespace CasptoneF
             }
             else
             {
+                // Obtain image length
                 int length = imageFileUpload.PostedFile.ContentLength;
+                // 
                 byte[] pic = new byte[length];
                 imageFileUpload.PostedFile.InputStream.Read(pic, 0, length);
                 SqlCommand cmd = new SqlCommand("INSERT into new_Table" + "(image,description) values(@image, @description)", con);

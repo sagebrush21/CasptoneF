@@ -54,32 +54,6 @@
 <!-- MAIN BODY INFO -->
 <div class="container text-center pt-5">
     <div class="row pt-5">
-        <div class="col-lg">
-            <div class="card border-0 mx-auto" style="width: 18rem;">
-                <a href="location.html"><img class="card-img-top" src="../images/chemistry.jpg" alt="Card image cap"></a>
-                <div class="card-body">
-                    <h5 class="card-title text-center"><a href="location.html"><button>Chemistry: The Central Science (13th Edition)</button></a></h5>    
-                </div>
-            </div>
-        </div>
-        <div class="col-lg">
-            <div class="card border-0 mx-auto" style="width: 18rem;">
-                <a href="location.html"><img class="card-img-top" src="../images/purse.jpg" alt="Card image cap"></a>
-                <div class="card-body">
-                    <h5 class="card-title text-center"><a href="location.html"><button>Black Purse</button></a></h5>    
-                </div>
-            </div>
-        </div>
-        <div class="col-lg">
-            <div class="card border-0 mx-auto" style="width: 18rem;">
-                <a href="location.html"><img class="card-img-top" src="../images/backpack.jpg" alt="Card image cap"></a>
-                <div class="card-body">
-                    <h5 class="card-title text-center"><a href="location.html"><button>Backpack</button></a></h5>    
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row pt-5">
         <asp:PlaceHolder ID="testPlaceHolder" runat="server"></asp:PlaceHolder>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [new_Table]"></asp:SqlDataSource>
     </div>
