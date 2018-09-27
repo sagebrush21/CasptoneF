@@ -46,10 +46,10 @@
     <h1>Login to Your Account</h1>
 		<br />
 			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br><br>
-			Password:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br><br>
-            <asp:Button ID="loginButton" runat="server" Text="Login" />
+			PassPassword:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br><br>
+            <asp:Button ID="loginButton" runat="server" Text="Login" OnClick="loginButton_Click" />
 			<br>
-		<a href="signUp.aspx"><h4>New User? Click here</h4> </a>
+		<a href="signUp.aspx"><h4>New User? Click here> </a>
 </div> 
     
 <!-- FOOTER -->
