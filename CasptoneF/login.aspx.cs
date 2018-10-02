@@ -24,16 +24,19 @@ namespace CasptoneF
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
 
+            string sql = "SELECT* FROM  loginTable WHERE username=@username AND [password]=@password";
+
             // String to store sql connection
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
-            con.Open();
+            
 
-            SqlCommand cmd = new SqlCommand("Select from  loginTable Where" + "(username AND password) values(@username, @password)", con);
+            SqlCommand sqlCommand = new SqlCommand(sql, con); ;
+            con.Open();
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
-            cmd.ExecuteNonQuery();
             cmd.Connection = con;
+            cmd.CommandText = sql;
             SqlDataReader rd = cmd.ExecuteReader();
 
             if (rd.HasRows)

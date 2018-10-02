@@ -35,6 +35,8 @@ namespace CasptoneF
             cmd.Parameters.AddWithValue("@password", password);
             cmd.ExecuteNonQuery();
 
+            Response.Redirect("login.aspx");
+
         }
     }
 }

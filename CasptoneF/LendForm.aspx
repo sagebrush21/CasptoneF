@@ -48,56 +48,57 @@
 <!-- BANNER -->    
 <!-- MAIN BODY INFO -->
 <div class="container text-center pt-5">
-    <h1>Lend your item</h1>
     <div class="row pt-5">
         <div class="col-lg">
             
             <table style="width:100%;">
                 <tr>
-                    <td class="auto-style2">
-                    Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="titleTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
-                    </td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                </tr>
-                <tr>
-                    <td><br /></td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
-                        Description:&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="descriptionTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
-                    </td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                </tr>
-                <tr>
-                    <td><br /></td>
-                </tr>
-
-                <tr>
-                    <td class="auto-style2">
-                    Price: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="priceTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
-                    </td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                </tr>
-
-                <tr>
-                    <td><br /></td>
+                    <td>
+                        <b>Instruction</b>: Enter your name, email, city, and description according to what 'borrowers' will see.
+                    </td>         
                 </tr>
                 <tr>
                     <td>
-                        IMG: &nbsp; <asp:FileUpload ID="imageFileUpload" runat="server" />
+                    Please enter a valid city as this is where the 'borrowers' will expect to pick up your item. 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        .....
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        Name: <asp:TextBox ID="nameTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        Email: <asp:TextBox ID="emailTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        City: <asp:TextBox ID="cityTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        Description: <asp:TextBox ID="descriptionTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    </td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:FileUpload ID="imageFileUpload" runat="server" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-                    <tr>
-                    <td><br /></td>
-                </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="submitButton" runat="server" Text="Lend!" OnClick="submitButton_Click" />
+                        <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
                     </td>
                     <td>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [new_Table]"></asp:SqlDataSource>

@@ -33,10 +33,10 @@
         <div class="navbar-nav mr-auto navbar-left font-sz-5">
         </div>
         <div class="navbar-nav ml-auto navbar-right font-sz-5">
-            <a class="nav-item nav-link" href="index.aspx"> Home </a>
+            <%--<a class="nav-item nav-link" href="#"> Home </a>
             <a class="nav-item nav-link ml-2" href="#">Borrow</a>
-            <a class="nav-item nav-link ml-2" href="lendForm.aspx">Lend</a>
-            <a class="nav-item nav-link ml-2" href="#">Contact</a>
+            <a class="nav-item nav-link ml-2" href="#">Lend</a>
+            <a class="nav-item nav-link ml-2" href="#">Contact</a>--%>
             <a class="nav-item nav-link ml-2 active" href="login.aspx">Login <span class="sr-only">(current)</span></a>
         </div>
     </div>
@@ -55,7 +55,7 @@
             <asp:ListItem Value="car">What is your favorite kind of car?</asp:ListItem>
             <asp:ListItem Value="year">What is your birth year?</asp:ListItem>
             </asp:DropDownList><br /><br />
-			AnswAnswer:  <asp:TextBox ID="answerTextBox" runat="server"></asp:TextBox><br /><br />
+			Answer:  <asp:TextBox ID="answerTextBox" runat="server"></asp:TextBox><br /><br />
             <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
 			<br />
 	</div>
