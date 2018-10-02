@@ -43,7 +43,7 @@ namespace CasptoneF
                         object binaryData = rd[1];
                         byte[] bytes = (byte[])binaryData;
 
-                        test.Append("<div class='col-4 col-sm pt-4'>");
+                        test.Append("<div class='col-lg-4 pt-4'>");
                         test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
                         test.Append("<img class='card-img-top'" + "src='data:image/png;base64," + Convert.ToBase64String(bytes, 0, bytes.Length) + "' alt='Card image cap'>");
                         test.Append("<div class='card-body'>");
@@ -74,7 +74,7 @@ namespace CasptoneF
                         object binaryData = rd[1];
                         byte[] bytes = (byte[])binaryData;
 
-                        test.Append("<div class='col-4 pt-4'>");
+                        test.Append("<div class='col-lg-4  pt-4'>");
                         test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
                         test.Append("<img class='card-img-top'" + "src='data:image/png;base64," + Convert.ToBase64String(bytes, 0, bytes.Length) + "' alt='Card image cap'>");
                         test.Append("<div class='card-body'>");

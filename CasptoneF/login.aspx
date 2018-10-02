@@ -15,14 +15,15 @@
     
     <style type="text/css">
 	
-</style>
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [loginTable]"></asp:SqlDataSource>
             <!-- NAVBAR -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bgark">
-    <a class="navbar-brand" href="index.html">Lendy</a>
+    <a class="navbar-brand" href="index.html">Lendy
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
