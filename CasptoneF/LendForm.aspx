@@ -4,20 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
- <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
     <title>Welcome to Lendy!</title>
     
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/webCSS.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/webCSS.css"/>
     <style type="text/css">
         .auto-style1 {
             margin-top: 0px;
         }
         .auto-style2 {
             height: 33px;
+        }
+        #submitButton{
+            width:  100px;
         }
     </style>
 </head>
@@ -45,27 +48,56 @@
 <!-- BANNER -->    
 <!-- MAIN BODY INFO -->
 <div class="container text-center pt-5">
+    <h1>Lend your item</h1>
     <div class="row pt-5">
         <div class="col-lg">
             
             <table style="width:100%;">
                 <tr>
                     <td class="auto-style2">
-                        <asp:TextBox ID="descriptionTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="titleTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
                     </td>
                     <td class="auto-style2"></td>
                     <td class="auto-style2"></td>
                 </tr>
                 <tr>
+                    <td><br /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        Description:&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="descriptionTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    </td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
+                </tr>
+                <tr>
+                    <td><br /></td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style2">
+                    Price: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="priceTextBox" runat="server" CssClass="auto-style1"></asp:TextBox>
+                    </td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
+                </tr>
+
+                <tr>
+                    <td><br /></td>
+                </tr>
+                <tr>
                     <td>
-                        <asp:FileUpload ID="imageFileUpload" runat="server" />
+                        IMG: &nbsp; <asp:FileUpload ID="imageFileUpload" runat="server" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
+                    <tr>
+                    <td><br /></td>
+                </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="submitButton" runat="server" Text="Button" OnClick="submitButton_Click" />
+                        <asp:Button ID="submitButton" runat="server" Text="Lend!" OnClick="submitButton_Click" />
                     </td>
                     <td>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [new_Table]"></asp:SqlDataSource>

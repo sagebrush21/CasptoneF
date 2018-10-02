@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../css/webCSS.css">
     
     <style type="text/css">
+        #submitButton{
+            width:  100px;
+        }
 	
 </style>
 </head>
@@ -46,15 +49,15 @@
    <div>
 		<h1>Create an Account</h1>
         <br />
-			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br /><br />
-			Password:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
+			User Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br /><br />
+			Password:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
 			Confirm Password:  <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
-			SecuSecurity Question:  <asp:DropDownList ID="securityDropDownList" runat="server">
+			SecuSecurity Question: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="securityDropDownList" runat="server">
             <asp:ListItem Value="color">What is your Favorite color?</asp:ListItem>
             <asp:ListItem Value="car">What is your favorite kind of car?</asp:ListItem>
             <asp:ListItem Value="year">What is your birth year?</asp:ListItem>
             </asp:DropDownList><br /><br />
-			AnswAnswer:  <asp:TextBox ID="answerTextBox" runat="server"></asp:TextBox><br /><br />
+			AnswAnswer: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="answerTextBox" runat="server"></asp:TextBox><br /><br />
             <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
 			<br />
 	</div>

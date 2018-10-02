@@ -2,16 +2,16 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"/>
 <head runat="server">
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
     <title>Welcome to Lendy!</title>
     
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/webCSS.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/webCSS.css"/>
     
     <style type="text/css">
 	
@@ -45,11 +45,13 @@
 <div class="container text-center pt-5">
     <h1>Login to Your Account</h1>
 		<br />
-			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br><br>
-			PassPassword:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br><br>
+			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox>
+            <br/><br/><br />
+			PassPassword:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br/><br/>
             <asp:Button ID="loginButton" runat="server" Text="Login" OnClick="loginButton_Click" />
-			<br>
-		<a href="signUp.aspx"><h4>New User? Click here> </a>
+			<br/>
+            <br />
+		<a href="signUp.aspx"><h4>New User? Click here></h4></a>
 </div> 
     
 <!-- FOOTER -->
