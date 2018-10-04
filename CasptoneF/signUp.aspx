@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
     <title>Welcome to Lendy!</title>
     
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/webCSS.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/webCSS.css"/>
     
     <style type="text/css">
 	
@@ -23,7 +23,7 @@
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [loginTable]"></asp:SqlDataSource>
             <!-- NAVBAR -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bgark">
-    <a class="navbar-brand" href="index.html">Lendy
+    <a class="navbar-brand" href="index.html">Lendy</a>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
 		<h1>Create an Account</h1>
         <br />
 			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br /><br />
-			Password:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
+			Password:  &nbsp;&nbsp;&nbsp;<asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
 			Confirm Password:  <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
 			Security Question:  <asp:DropDownList ID="securityDropDownList" runat="server">
             <asp:ListItem Value="color">What is your Favorite color?</asp:ListItem>
