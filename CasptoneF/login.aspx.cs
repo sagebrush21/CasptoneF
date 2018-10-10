@@ -49,6 +49,8 @@ namespace CasptoneF
             else
             {
                 passwordTextBox.Text = "";
+                errorLabel.Visible = true;
+                errorLabel.Text = "Username or password is incorrect!";
 
             }
 

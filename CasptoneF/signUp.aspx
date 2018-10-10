@@ -49,7 +49,7 @@
         <br />
 			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br /><br />
 			Password:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
-			Confirm Password:  <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
+			Confirm Password:   Password:  <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
 			Security Question:  <asp:DropDownList ID="securityDropDownList" runat="server">
             <asp:ListItem Value="color">What is your Favorite color?</asp:ListItem>
             <asp:ListItem Value="car">What is your favorite kind of car?</asp:ListItem>

@@ -40,14 +40,14 @@ namespace CasptoneF
                 {
                     while (rd.Read())
                     {
-                        object binaryData = rd[1];
+                        object binaryData = rd[0];
                         byte[] bytes = (byte[])binaryData;
 
                         test.Append("<div class='col-lg-4 pt-4'>");
                         test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
                         test.Append("<img class='card-img-top'" + "src='data:image/png;base64," + Convert.ToBase64String(bytes, 0, bytes.Length) + "' alt='Card image cap'>");
                         test.Append("<div class='card-body'>");
-                        test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton'>" + rd[2] + "</button></a></h5>");
+                        test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton' id='" + rd[2] + "'>" + rd[1] + "</button></a></h5>");
                         test.Append("</div>");
                         test.Append("</div>");
                         test.Append("</div>");
@@ -71,14 +71,14 @@ namespace CasptoneF
                 {
                     while (rd.Read())
                     {
-                        object binaryData = rd[1];
+                        object binaryData = rd[0];
                         byte[] bytes = (byte[])binaryData;
 
-                        test.Append("<div class='col-lg-4  pt-4'>");
+                        test.Append("<div class='col-lg-4 pt-4'>");
                         test.Append("<div class='card border-0mx-auto' style='width: 18rem; '>");
                         test.Append("<img class='card-img-top'" + "src='data:image/png;base64," + Convert.ToBase64String(bytes, 0, bytes.Length) + "' alt='Card image cap'>");
                         test.Append("<div class='card-body'>");
-                        test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton'>" + rd[2] + "</button></a></h5>");
+                        test.Append("<h5 class='card-title text-center'><a href='#'><button type='button' class='mainButton' id='" + rd[2] + "'>" + rd[1] + "</button></a></h5>");
                         test.Append("</div>");
                         test.Append("</div>");
                         test.Append("</div>");

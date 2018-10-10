@@ -38,9 +38,12 @@ namespace CasptoneF
                 // 
                 byte[] pic = new byte[length];
                 imageFileUpload.PostedFile.InputStream.Read(pic, 0, length);
-                SqlCommand cmd = new SqlCommand("INSERT into new_Table" + "(image,description) values(@image, @description)", con);
+                SqlCommand cmd = new SqlCommand("INSERT into new_Table" + "(image,description,name,location,email) values(@image, @description, @name, @location, @email)", con);
                 cmd.Parameters.AddWithValue("@image", pic);
                 cmd.Parameters.AddWithValue("@description", descriptionTextBox.Text);
+                cmd.Parameters.AddWithValue("@name", nameTextBox.Text);
+                cmd.Parameters.AddWithValue("@location", cityTextBox.Text);
+                cmd.Parameters.AddWithValue("@email", emailTextBox.Text);
                 cmd.ExecuteNonQuery();
             }
 

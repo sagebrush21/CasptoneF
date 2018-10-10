@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="borrow.aspx" />
     <Content Include="css\webCSS.css" />
     <Content Include="images\backpack.jpg" />
     <Content Include="images\chemistry.jpg" />
@@ -142,6 +143,13 @@
     <Content Include="js\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="borrow.aspx.cs">
+      <DependentUpon>borrow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="borrow.aspx.designer.cs">
+      <DependentUpon>borrow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

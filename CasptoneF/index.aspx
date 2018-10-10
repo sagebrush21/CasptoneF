@@ -43,7 +43,6 @@
         </div>
         <div class="navbar-nav ml-auto navbar-right font-sz-5">
             <a class="nav-item nav-link active" href="index.aspx"> Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link ml-2" href="#">Borrow</a>
             <a class="nav-item nav-link ml-2" href="lendForm.aspx">Lend</a>
             <a class="nav-item nav-link ml-2" href="#">Contact</a>
             <a class="nav-item nav-link ml-2" href="login.aspx">Login</a>
@@ -72,7 +71,7 @@
 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="../js/bootstrap.js"></script>    
-<!-- <script src="../js/webJava.js"></script> -->
+<script src="../js/webJava.js"></script>
         </div>
     </form>
 </body>
