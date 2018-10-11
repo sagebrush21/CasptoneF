@@ -47,7 +47,9 @@ namespace CasptoneF
                 cmd.ExecuteNonQuery();
             }
 
-            
+
+            Response.Redirect("login.aspx");
+
         }
     }
 }
