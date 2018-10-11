@@ -12,8 +12,7 @@ namespace CasptoneF
 {
     public partial class borrow : System.Web.UI.Page
     {
-        StringBuilder test = new StringBuilder();
-        bool isReloaded = false;
+
         string searchText;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -53,7 +52,21 @@ namespace CasptoneF
 
         protected void borrowButton_Click(object sender, EventArgs e)
         {
-            
+            string id = searchText;
+
+            int newId = Convert.ToInt32(id);
+            // String to store sql connection
+            string a;
+            // Connection string from sql database stored and connection established
+            a = ConfigurationManager.ConnectionStrings["myDB"].ToString();
+            SqlConnection con = new SqlConnection(a);
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("Delete From new_Table where" + "(productID) values(@productID)", con);
+            cmd.Parameters.AddWithValue("@productID", newId);
+            cmd.ExecuteNonQuery();
+
+            Response.Redirect("login.aspx");
         }
     }
 }
