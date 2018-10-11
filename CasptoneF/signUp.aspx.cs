@@ -26,7 +26,7 @@ namespace CasptoneF
                 // String to store sql connection
                 string a;
                 // Connection string from sql database stored and connection established
-                a = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
+                a = ConfigurationManager.ConnectionStrings["myDB"].ToString();
                 SqlConnection con = new SqlConnection(a);
                 con.Open();
 

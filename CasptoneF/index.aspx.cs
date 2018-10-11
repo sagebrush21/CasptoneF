@@ -29,7 +29,7 @@ namespace CasptoneF
             if (isReloaded)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["myDB"].ToString();
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "Select * from [new_Table] where description LIKE '%" + searchText + "%'";
@@ -60,7 +60,7 @@ namespace CasptoneF
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["testDataConnectionString"].ToString();
+                con.ConnectionString = ConfigurationManager.ConnectionStrings["myDB"].ToString();
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "Select * from [new_Table]";
