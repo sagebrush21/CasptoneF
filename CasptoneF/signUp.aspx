@@ -65,7 +65,7 @@
     <div class="container  w-100 h-100">
         <div class="row">
             <div class="col pt-4">
-                <p class="text-white text-right"><a href="privacy.html">Notice of Privacy Practices</p>
+                <p class="text-white text-right"><a href"#">Notice of Privacy Practices</p>
             </div>
         </div>
     </div>
