@@ -54,7 +54,6 @@
 <div class="container text-center pt-5">
     <div class="row pt-5">
         <asp:PlaceHolder ID="testPlaceHolder" runat="server"></asp:PlaceHolder>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [new_Table]"></asp:SqlDataSource>
     </div>
 </div> 
     

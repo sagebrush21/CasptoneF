@@ -100,8 +100,7 @@
                         <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
                     </td>
                     <td>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [new_Table]"></asp:SqlDataSource>
-                    </td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

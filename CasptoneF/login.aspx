@@ -20,7 +20,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testDataConnectionString %>" SelectCommand="SELECT * FROM [loginTable]"></asp:SqlDataSource>
             <!-- NAVBAR -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bgark">
     <a class="navbar-brand" href="index.html">Lendy</a>
