@@ -37,9 +37,9 @@
     
     <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto navbar-right font-sz-5">
-            <a class="nav-item nav-link active" href="index.aspx"> Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link ml-2" href="lendForm.aspx">Lend</a>
-            <a class="nav-item nav-link ml-2" href="#">Contact</a>
+            <a class="nav-item nav-link" href="index.aspx"> Home </a>
+            <a class="nav-item nav-link ml-2 active" href="lendForm.aspx">Lend<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link ml-2" href="contact.aspx">Contact</a>
             <a class="nav-item nav-link ml-2" href="login.aspx">Login</a>
         </div>
     </div>

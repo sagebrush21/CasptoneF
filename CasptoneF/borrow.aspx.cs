@@ -62,11 +62,10 @@ namespace CasptoneF
             SqlConnection con = new SqlConnection(a);
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Delete From new_Table where" + "(productID) values(@productID)", con);
-            cmd.Parameters.AddWithValue("@productID", newId);
+            SqlCommand cmd = new SqlCommand("DELETE From new_Table where productID =" + searchText , con);
             cmd.ExecuteNonQuery();
 
-            Response.Redirect("login.aspx");
+            Response.Redirect("index.aspx");
         }
     }
 }

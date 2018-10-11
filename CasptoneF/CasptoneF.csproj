@@ -70,6 +70,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="borrow.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="css\webCSS.css" />
     <Content Include="images\backpack.jpg" />
     <Content Include="images\chemistry.jpg" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="borrow.aspx.designer.cs">
       <DependentUpon>borrow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

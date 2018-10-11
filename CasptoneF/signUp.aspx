@@ -45,8 +45,7 @@
 <div class="container text-center pt-5">
    <div>
 		<h1>Create an Account</h1>
-        <br />
-			User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br /><br />
+       User Name: <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox><br /><br />
 			Password:  <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
 			Confirm Password:   Password:  <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox><br /><br />
 			Security Question:  <asp:DropDownList ID="securityDropDownList" runat="server">
@@ -65,7 +64,7 @@
     <div class="container  w-100 h-100">
         <div class="row">
             <div class="col pt-4">
-                <p class="text-white text-right"><a href"#">Notice of Privacy Practices</p>
+                <p class="text-white text-right"><a href"#">Notice of Privacy Practicescy Practices</p>
             </div>
         </div>
     </div>
