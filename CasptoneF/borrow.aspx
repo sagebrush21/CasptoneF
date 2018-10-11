@@ -51,7 +51,7 @@
 <!-- MAIN BODY INFO -->
 <div class="container text-center pt-5">
     <div class="row pt-5">
-        <div class='col-lg-4 pt-4 ml-auto'>
+        <div class='col-lg-4 pt-4 m-auto'>
         <div class="card">
             <div class="card border-0mx-auto' style='width: 18rem;">
                 <asp:Image ID="mainImage" runat="server" AlternateText="Product Image" CssClass="card-img-top" />
